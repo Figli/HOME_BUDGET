@@ -1,0 +1,109 @@
+body {
+    background-color: #eefff6;
+}
+
+.top {
+    height: 50px;
+}
+
+.top_links a {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.top_links {
+    margin-top: 25px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.top_links a:hover {
+    text-decoration: none;
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    height: 67px;
+}
+
+#login {
+    /*padding-top: 50px;*/
+
+}
+
+.pic {
+    height: 25px;
+}
+
+#pic h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 100px;
+}
+
+.top_baner {
+    width: auto;
+    height: 130px;
+    background-color: #f8d66b;
+    position: relative;
+    border: #080808;
+}
+
+.top_baner_up {
+    height: 5px;
+    background-image: url(../img/border.png);
+}
+
+.top_baner_down {
+    height: 80px;
+    position: relative;
+    bottom: 40px;
+    background: url(../img/border_down_gr.png) no-repeat;
+}
+
+.text_logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text_logo h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/*
+.fon {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    /!*display: block;*!/
+    /!*width: auto;*!/
+    /!*height: 450px;*!/
+    position: relative;
+    bottom: 50px;
+    background: url(../img/fon_new3.png) no-repeat;
+}
+*/
+
+#fon_main img {
+    display: block;
+    height: 398px;
+    width: 100%;
+}
+
+.reg_login {
+    /*width: auto;*/
+    height: 398px;
+    position: relative;
+    bottom: 398px;
+    background-color: #ecffdc;
+    opacity: 0.95;
+}

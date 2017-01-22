@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title></title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.css"
+          th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.css}"
+          rel="stylesheet" media="screen"/>
+
+    <link href="../static/css/main.css" th:href="@{css/main.css}" rel="stylesheet" media="all"/>
+    <link href="../static/css/login.css" th:href="@{css/login.css}" rel="stylesheet" media="all"/>
+
+    <!--<link rel="stylesheet" href="css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="css/main.css"/>-->
+    <!--<link rel="stylesheet" href="css/login.css"/>-->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../static/js/my.js" th:src="@{js/my.js}"></script>
+    <script src="../static/js/bootstrap.js" th:src="@{js/bootstrap.js}"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="top">
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="user" class="logo"><img src="../static/img/logo.png" th:src="@{img/logo.png}"/></a>
+            </div>
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-3">
+                <div class="username">
+                    <!--User - <b th:inline="text"> [[${#httpServletRequest.remoteUser}]] </b>-->
+                    User - <b th:text="${user.getLogin()}"></b>
+                    User ID - <b th:text="${user.getId()}"></b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        Кошелек - <b th:text="${user.getPurseList().get(0).getPurseBalans()}"></b>
+
+    </div>
+
+    <!--<div class="btnlogout" th:action="@{/logout}" method="post">
+        <input type="submit" value="Log Out"/>
+    </div>-->
+
+    <form th:action="@{/logout}" method="POST">
+        <input type="submit" value="Logout"/>
+    </form>
+</div>
+
+</body>
+</html>
